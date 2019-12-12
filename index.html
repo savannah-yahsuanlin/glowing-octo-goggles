@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airfryer</title>   
+</head>
+     <body>
+      <label>Select month</label>
+          <select id="months">
+            <option value="">--Make a choice--</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+          <p></p>
+          <script>
+          
+            let select =  document.querySelector('select');
+            let para = document.querySelector('p');
+            
+            select.addEventListener('change', setBrands);
+
+            function setBrands(){
+              let choice = select.value;
+
+              if (choice === 'philips'){
+                para.textContent = 'Excellent Choice';
+              } else if (choice === 'cuisinart'){
+                para.textContent = 'Great!';
+              }  else if (choice === 'ninja'){
+                para.textContent = 'Good';
+              } else if (choice === 'gowise'){
+                para.textContent = 'Seriously?'
+              } else {
+                para.textContent = '';
+              }
+
+            }
+
+          </script>
+     </body>
+</html>
